@@ -1,0 +1,24 @@
+<html>
+     <head>
+        <title>Mon template</title>
+    </head>
+    <body>
+        <h1>Mon templates</h1>
+
+        <p>Bienvenu {{prenom}} sur ma page de blog</p>
+
+        <h2> la liste mes montres</h2>
+
+        {% for montre in montres %}
+            <h3>{{montres}}</h3>
+        {% endfor %}
+        {% if age < 18 %}
+                <p> PAS OPEN BAR </p>
+        {% else %}   
+            <P>OPEN BAR </P> 
+        {% endif %}  
+        {% load static %} 
+        <img src="{% static 'monimage.jpg' %}"/>
+    </body>
+</html>
+
